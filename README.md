@@ -18,21 +18,71 @@ A homebrew single-conversion SSB transceiver for the 40-meter amateur radio band
 
 ## Block Diagram
 
-```
-                          7MHz SSB TRANSCEIVER
+```mermaid
+flowchart TB
+    subgraph Control["Control System"]
+        MCU[Arduino Nano]
+        OLED[OLED Display]
+        ENC[Rotary Encoder]
+        PTT[PTT Switch]
+        MCU --- OLED
+        MCU --- ENC
+        MCU --- PTT
+    end
 
-    [ANT] <---> [T/R Relay] <---> [BPF] <---> [RX Mixer] ---> [IF Filter] ---> [Product Det] ---> [AF Amp] ---> [Speaker]
-                    |                            ^                                   ^
-                    |                            |                                   |
-                    +---> [LPF] <--- [PA] <--- [TX Mixer] <--- [IF Filter] <--- [Bal Mod] <--- [Mic Amp] <--- [Mic]
-                                                 ^                                   ^
-                                                 |                                   |
-                                            [Si5351 VFO]                       [Si5351 BFO]
-                                                 ^
-                                                 |
-                                           [Arduino Nano]
-                                                 |
-                                       [OLED] [Encoder] [PTT]
+    subgraph DDS["Si5351A DDS"]
+        VFO[VFO<br/>16.0-16.2 MHz]
+        BFO[BFO<br/>8.9985 MHz]
+    end
+
+    subgraph RX["Receive Path"]
+        BPF[BPF<br/>7 MHz]
+        RXM[RX Mixer<br/>SA612]
+        IFF1[IF Filter<br/>9 MHz]
+        PD[Product Det<br/>SA612]
+        AFA[AF Amp<br/>LM386]
+        SP[Speaker]
+        BPF --> RXM --> IFF1 --> PD --> AFA --> SP
+    end
+
+    subgraph TX["Transmit Path"]
+        MIC[Microphone]
+        MA[Mic Amp<br/>2SC1815]
+        BM[Bal Mod<br/>SA612]
+        IFF2[IF Filter<br/>9 MHz]
+        TXM[TX Mixer<br/>SA612]
+        PA[PA 5W<br/>2SC1971]
+        LPF[LPF<br/>7 MHz]
+        MIC --> MA --> BM --> IFF2 --> TXM --> PA --> LPF
+    end
+
+    subgraph ANT["Antenna"]
+        RELAY[T/R Relay]
+        ANTENNA[ANT]
+        RELAY <--> ANTENNA
+    end
+
+    MCU --> VFO
+    MCU --> BFO
+    VFO --> RXM
+    VFO --> TXM
+    BFO --> BM
+    BFO --> PD
+    RELAY --> BPF
+    LPF --> RELAY
+```
+
+### Signal Flow Diagram
+
+```mermaid
+flowchart LR
+    subgraph RX["RX Mode"]
+        A1[7 MHz RF] --> A2[BPF] --> A3[Mixer] --> A4[9 MHz IF] --> A5[Filter] --> A6[Detector] --> A7[Audio]
+    end
+
+    subgraph TX["TX Mode"]
+        B1[Audio] --> B2[Mic Amp] --> B3[Bal Mod] --> B4[9 MHz DSB] --> B5[Filter] --> B6[SSB] --> B7[Mixer] --> B8[7 MHz RF]
+    end
 ```
 
 ## Hardware Architecture
