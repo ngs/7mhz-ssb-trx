@@ -1,1268 +1,1674 @@
 (kicad_sch
-  (version 20231120)
-  (generator "eeschema")
-  (generator_version "8.0")
-  (uuid "control-sheet-uuid-001")
-  (paper "A4")
-  (title_block
-    (title "Control System")
-    (date "2024-12-24")
-    (rev "1.0")
-    (comment 1 "Arduino Nano + Si5351A + OLED")
-  )
-
-  (lib_symbols
-    (symbol "Arduino_Nano:Arduino_Nano"
-      (pin_names
-        (offset 1.016)
-      )
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (property "Reference" "U"
-        (at 0 26.67 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Value" "Arduino_Nano"
-        (at 0 -26.67 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Footprint" "Module:Arduino_Nano"
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-          (hide yes)
-        )
-      )
-      (symbol "Arduino_Nano_0_1"
-        (rectangle
-          (start -10.16 25.4)
-          (end 10.16 -25.4)
-          (stroke
-            (width 0.254)
-            (type solid)
-          )
-          (fill
-            (type background)
-          )
-        )
-      )
-      (symbol "Arduino_Nano_1_1"
-        (pin power_in line
-          (at -12.7 22.86 0)
-          (length 2.54)
-          (name "VIN"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "30"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin power_out line
-          (at -12.7 20.32 0)
-          (length 2.54)
-          (name "5V"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "27"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin power_out line
-          (at -12.7 17.78 0)
-          (length 2.54)
-          (name "3V3"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "17"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin power_in line
-          (at -12.7 -22.86 0)
-          (length 2.54)
-          (name "GND"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "29"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin bidirectional line
-          (at 12.7 20.32 180)
-          (length 2.54)
-          (name "D2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "5"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin bidirectional line
-          (at 12.7 17.78 180)
-          (length 2.54)
-          (name "D3"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "6"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin bidirectional line
-          (at 12.7 15.24 180)
-          (length 2.54)
-          (name "D4"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "7"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin bidirectional line
-          (at 12.7 12.7 180)
-          (length 2.54)
-          (name "D5"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "8"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin bidirectional line
-          (at 12.7 10.16 180)
-          (length 2.54)
-          (name "D6"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "9"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin bidirectional line
-          (at 12.7 -15.24 180)
-          (length 2.54)
-          (name "A4/SDA"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "23"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin bidirectional line
-          (at 12.7 -17.78 180)
-          (length 2.54)
-          (name "A5/SCL"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "24"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-    )
-    (symbol "Si5351:Si5351A_Module"
-      (pin_names
-        (offset 1.016)
-      )
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (property "Reference" "U"
-        (at 0 10.16 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Value" "Si5351A_Module"
-        (at 0 -10.16 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (symbol "Si5351A_Module_0_1"
-        (rectangle
-          (start -7.62 8.89)
-          (end 7.62 -8.89)
-          (stroke
-            (width 0.254)
-            (type solid)
-          )
-          (fill
-            (type background)
-          )
-        )
-      )
-      (symbol "Si5351A_Module_1_1"
-        (pin power_in line
-          (at -10.16 6.35 0)
-          (length 2.54)
-          (name "VCC"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin power_in line
-          (at -10.16 -6.35 0)
-          (length 2.54)
-          (name "GND"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin bidirectional line
-          (at -10.16 2.54 0)
-          (length 2.54)
-          (name "SDA"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "3"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin bidirectional line
-          (at -10.16 -1.27 0)
-          (length 2.54)
-          (name "SCL"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "4"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin output line
-          (at 10.16 6.35 180)
-          (length 2.54)
-          (name "CLK0"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "5"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin output line
-          (at 10.16 2.54 180)
-          (length 2.54)
-          (name "CLK1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "6"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin output line
-          (at 10.16 -1.27 180)
-          (length 2.54)
-          (name "CLK2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "7"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-    )
-    (symbol "OLED:OLED_I2C_128x64"
-      (pin_names
-        (offset 1.016)
-      )
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (property "Reference" "U"
-        (at 0 8.89 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Value" "OLED_128x64"
-        (at 0 -8.89 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (symbol "OLED_I2C_128x64_0_1"
-        (rectangle
-          (start -7.62 7.62)
-          (end 7.62 -7.62)
-          (stroke
-            (width 0.254)
-            (type solid)
-          )
-          (fill
-            (type background)
-          )
-        )
-      )
-      (symbol "OLED_I2C_128x64_1_1"
-        (pin power_in line
-          (at -10.16 5.08 0)
-          (length 2.54)
-          (name "VCC"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin power_in line
-          (at -10.16 -5.08 0)
-          (length 2.54)
-          (name "GND"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin bidirectional line
-          (at -10.16 2.54 0)
-          (length 2.54)
-          (name "SDA"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "3"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin input line
-          (at -10.16 0 0)
-          (length 2.54)
-          (name "SCL"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "4"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-    )
-    (symbol "Encoder:RotaryEncoder_SW"
-      (pin_names
-        (offset 1.016)
-      )
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (property "Reference" "SW"
-        (at 0 6.35 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Value" "RotaryEncoder"
-        (at 0 -6.35 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (symbol "RotaryEncoder_SW_0_1"
-        (rectangle
-          (start -5.08 5.08)
-          (end 5.08 -5.08)
-          (stroke
-            (width 0.254)
-            (type solid)
-          )
-          (fill
-            (type background)
-          )
-        )
-      )
-      (symbol "RotaryEncoder_SW_1_1"
-        (pin output line
-          (at -7.62 2.54 0)
-          (length 2.54)
-          (name "A"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin output line
-          (at -7.62 0 0)
-          (length 2.54)
-          (name "B"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at -7.62 -2.54 0)
-          (length 2.54)
-          (name "C"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "3"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin output line
-          (at 7.62 2.54 180)
-          (length 2.54)
-          (name "SW"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "4"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 7.62 -2.54 180)
-          (length 2.54)
-          (name "SW_GND"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "5"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-    )
-    (symbol "Device:R"
-      (pin_names
-        (offset 0)
-      )
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (property "Reference" "R"
-        (at 2.032 0 90)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Value" "R"
-        (at 0 0 90)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (symbol "R_0_1"
-        (rectangle
-          (start -1.016 -2.54)
-          (end 1.016 2.54)
-          (stroke
-            (width 0.254)
-            (type solid)
-          )
-          (fill
-            (type none)
-          )
-        )
-      )
-      (symbol "R_1_1"
-        (pin passive line
-          (at 0 3.81 270)
-          (length 1.27)
-          (name "~"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 0 -3.81 90)
-          (length 1.27)
-          (name "~"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-    )
-    (symbol "Device:C"
-      (pin_names
-        (offset 0.254)
-      )
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (property "Reference" "C"
-        (at 0.635 2.54 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-          (justify left)
-        )
-      )
-      (property "Value" "C"
-        (at 0.635 -2.54 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-          (justify left)
-        )
-      )
-      (symbol "C_0_1"
-        (polyline
-          (pts
-            (xy -2.032 -0.762) (xy 2.032 -0.762)
-          )
-          (stroke
-            (width 0.508)
-            (type solid)
-          )
-          (fill
-            (type none)
-          )
-        )
-        (polyline
-          (pts
-            (xy -2.032 0.762) (xy 2.032 0.762)
-          )
-          (stroke
-            (width 0.508)
-            (type solid)
-          )
-          (fill
-            (type none)
-          )
-        )
-      )
-      (symbol "C_1_1"
-        (pin passive line
-          (at 0 3.81 270)
-          (length 2.794)
-          (name "~"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 0 -3.81 90)
-          (length 2.794)
-          (name "~"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-    )
-  )
-
-  (hierarchical_label "VFO"
-    (shape output)
-    (at 177.8 55.88 0)
-    (effects
-      (font
-        (size 1.27 1.27)
-      )
-      (justify left)
-    )
-    (uuid "hlabel-vfo")
-  )
-  (hierarchical_label "BFO"
-    (shape output)
-    (at 177.8 63.5 0)
-    (effects
-      (font
-        (size 1.27 1.27)
-      )
-      (justify left)
-    )
-    (uuid "hlabel-bfo")
-  )
-  (hierarchical_label "TX_EN"
-    (shape output)
-    (at 137.16 83.82 0)
-    (effects
-      (font
-        (size 1.27 1.27)
-      )
-      (justify left)
-    )
-    (uuid "hlabel-tx-en")
-  )
-
-  (symbol
-    (lib_id "Arduino_Nano:Arduino_Nano")
-    (at 101.6 76.2 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "U1-arduino")
-    (property "Reference" "U1"
-      (at 101.6 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Value" "Arduino_Nano"
-      (at 101.6 104.14 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (pin "30"
-      (uuid "pin-vin")
-    )
-    (pin "27"
-      (uuid "pin-5v")
-    )
-    (pin "17"
-      (uuid "pin-3v3")
-    )
-    (pin "29"
-      (uuid "pin-gnd")
-    )
-    (pin "5"
-      (uuid "pin-d2")
-    )
-    (pin "6"
-      (uuid "pin-d3")
-    )
-    (pin "7"
-      (uuid "pin-d4")
-    )
-    (pin "8"
-      (uuid "pin-d5")
-    )
-    (pin "9"
-      (uuid "pin-d6")
-    )
-    (pin "23"
-      (uuid "pin-a4")
-    )
-    (pin "24"
-      (uuid "pin-a5")
-    )
-  )
-
-  (symbol
-    (lib_id "Si5351:Si5351A_Module")
-    (at 160.02 60.96 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "U2-si5351")
-    (property "Reference" "U2"
-      (at 160.02 49.53 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Value" "Si5351A"
-      (at 160.02 72.39 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "pin-si-vcc")
-    )
-    (pin "2"
-      (uuid "pin-si-gnd")
-    )
-    (pin "3"
-      (uuid "pin-si-sda")
-    )
-    (pin "4"
-      (uuid "pin-si-scl")
-    )
-    (pin "5"
-      (uuid "pin-si-clk0")
-    )
-    (pin "6"
-      (uuid "pin-si-clk1")
-    )
-    (pin "7"
-      (uuid "pin-si-clk2")
-    )
-  )
-
-  (symbol
-    (lib_id "OLED:OLED_I2C_128x64")
-    (at 160.02 91.44 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "U3-oled")
-    (property "Reference" "U3"
-      (at 160.02 81.28 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Value" "OLED_128x64"
-      (at 160.02 101.6 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "pin-oled-vcc")
-    )
-    (pin "2"
-      (uuid "pin-oled-gnd")
-    )
-    (pin "3"
-      (uuid "pin-oled-sda")
-    )
-    (pin "4"
-      (uuid "pin-oled-scl")
-    )
-  )
-
-  (symbol
-    (lib_id "Encoder:RotaryEncoder_SW")
-    (at 50.8 76.2 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "SW1-encoder")
-    (property "Reference" "SW1"
-      (at 50.8 68.58 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Value" "EC11"
-      (at 50.8 83.82 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "pin-enc-a")
-    )
-    (pin "2"
-      (uuid "pin-enc-b")
-    )
-    (pin "3"
-      (uuid "pin-enc-c")
-    )
-    (pin "4"
-      (uuid "pin-enc-sw")
-    )
-    (pin "5"
-      (uuid "pin-enc-swgnd")
-    )
-  )
-
-  (symbol
-    (lib_id "Device:R")
-    (at 134.62 60.96 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "R1-pullup-sda")
-    (property "Reference" "R1"
-      (at 136.906 59.69 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left)
-      )
-    )
-    (property "Value" "4.7k"
-      (at 136.906 62.23 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left)
-      )
-    )
-    (pin "1"
-      (uuid "pin-r1-1")
-    )
-    (pin "2"
-      (uuid "pin-r1-2")
-    )
-  )
-
-  (symbol
-    (lib_id "Device:R")
-    (at 139.7 60.96 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "R2-pullup-scl")
-    (property "Reference" "R2"
-      (at 141.986 59.69 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left)
-      )
-    )
-    (property "Value" "4.7k"
-      (at 141.986 62.23 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left)
-      )
-    )
-    (pin "1"
-      (uuid "pin-r2-1")
-    )
-    (pin "2"
-      (uuid "pin-r2-2")
-    )
-  )
-
-  (symbol
-    (lib_id "Device:R")
-    (at 68.58 63.5 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "R3-ptt-pullup")
-    (property "Reference" "R3"
-      (at 70.866 62.23 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left)
-      )
-    )
-    (property "Value" "10k"
-      (at 70.866 64.77 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left)
-      )
-    )
-    (pin "1"
-      (uuid "pin-r3-1")
-    )
-    (pin "2"
-      (uuid "pin-r3-2")
-    )
-  )
-
-  (symbol
-    (lib_id "Device:C")
-    (at 177.8 71.12 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "C1-bypass-si5351")
-    (property "Reference" "C1"
-      (at 180.594 69.85 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left)
-      )
-    )
-    (property "Value" "0.1uF"
-      (at 180.594 72.39 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (justify left)
-      )
-    )
-    (pin "1"
-      (uuid "pin-c1-1")
-    )
-    (pin "2"
-      (uuid "pin-c1-2")
-    )
-  )
-
-  (text "CONTROL SYSTEM\nArduino Nano + Si5351A DDS + OLED Display"
-    (exclude_from_sim no)
-    (at 101.6 30.48 0)
-    (effects
-      (font
-        (size 3 3)
-        (bold yes)
-      )
-    )
-    (uuid "text-title")
-  )
-
-  (text "I2C Bus: SDA=A4, SCL=A5\nPullup: 4.7k to +5V"
-    (exclude_from_sim no)
-    (at 134.62 50.8 0)
-    (effects
-      (font
-        (size 1.5 1.5)
-      )
-      (justify left)
-    )
-    (uuid "text-i2c")
-  )
-
-  (text "Rotary Encoder\nA->D2, B->D3\nSW->D5"
-    (exclude_from_sim no)
-    (at 40.64 63.5 0)
-    (effects
-      (font
-        (size 1.5 1.5)
-      )
-      (justify left)
-    )
-    (uuid "text-encoder")
-  )
-
-  (text "PTT Input\nD4 (Active Low)"
-    (exclude_from_sim no)
-    (at 68.58 55.88 0)
-    (effects
-      (font
-        (size 1.5 1.5)
-      )
-      (justify left)
-    )
-    (uuid "text-ptt")
-  )
-
-  (text "CLK0: VFO (16.0-16.2 MHz)\nCLK1: BFO (8.9985 MHz)\nCLK2: Spare"
-    (exclude_from_sim no)
-    (at 175.26 45.72 0)
-    (effects
-      (font
-        (size 1.5 1.5)
-      )
-      (justify left)
-    )
-    (uuid "text-clk")
-  )
-
-  (text "TX_EN: D6\nHigh = TX mode"
-    (exclude_from_sim no)
-    (at 119.38 88.9 0)
-    (effects
-      (font
-        (size 1.5 1.5)
-      )
-      (justify left)
-    )
-    (uuid "text-txen")
-  )
-
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "682b9418-75df-43da-8707-2c858c780559")
+	(paper "A4")
+	(title_block
+		(title "Control System")
+		(date "2024-12-24")
+		(rev "1.0")
+		(comment 1 "Arduino Nano + Si5351A + OLED")
+	)
+	(lib_symbols
+		(symbol "Arduino_Nano:Arduino_Nano"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 26.67 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Arduino_Nano"
+				(at 0 -26.67 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Module:Arduino_Nano"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Arduino_Nano_0_1"
+				(rectangle
+					(start -10.16 25.4)
+					(end 10.16 -25.4)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "Arduino_Nano_1_1"
+				(pin power_in line
+					(at -12.7 22.86 0)
+					(length 2.54)
+					(name "VIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "30"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at -12.7 20.32 0)
+					(length 2.54)
+					(name "5V"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "27"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at -12.7 17.78 0)
+					(length 2.54)
+					(name "3V3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -12.7 -22.86 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "29"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 20.32 180)
+					(length 2.54)
+					(name "D2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 17.78 180)
+					(length 2.54)
+					(name "D3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 15.24 180)
+					(length 2.54)
+					(name "D4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 12.7 180)
+					(length 2.54)
+					(name "D5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 10.16 180)
+					(length 2.54)
+					(name "D6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 -15.24 180)
+					(length 2.54)
+					(name "A4/SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 -17.78 180)
+					(length 2.54)
+					(name "A5/SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:C"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:R"
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Encoder:RotaryEncoder_SW"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SW"
+				(at 0 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "RotaryEncoder"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "RotaryEncoder_SW_0_1"
+				(rectangle
+					(start -5.08 5.08)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "RotaryEncoder_SW_1_1"
+				(pin output line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "SW"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "SW_GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "OLED:OLED_I2C_128x64"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "OLED_128x64"
+				(at 0 -8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "OLED_I2C_128x64_0_1"
+				(rectangle
+					(start -7.62 7.62)
+					(end 7.62 -7.62)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "OLED_I2C_128x64_1_1"
+				(pin power_in line
+					(at -10.16 5.08 0)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -10.16 -5.08 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Si5351:Si5351A_Module"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Si5351A_Module"
+				(at 0 -10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Si5351A_Module_0_1"
+				(rectangle
+					(start -7.62 8.89)
+					(end 7.62 -8.89)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "Si5351A_Module_1_1"
+				(pin power_in line
+					(at -10.16 6.35 0)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -10.16 -1.27 0)
+					(length 2.54)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -10.16 -6.35 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 6.35 180)
+					(length 2.54)
+					(name "CLK0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 2.54 180)
+					(length 2.54)
+					(name "CLK1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 10.16 -1.27 180)
+					(length 2.54)
+					(name "CLK2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "TX_EN: D6\nHigh = TX mode"
+		(exclude_from_sim no)
+		(at 119.38 88.9 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left)
+		)
+		(uuid "37e32471-6de1-4717-bd74-fe9f944946b9")
+	)
+	(text "PTT Input\nD4 (Active Low)"
+		(exclude_from_sim no)
+		(at 68.58 55.88 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left)
+		)
+		(uuid "46f52d74-c6c5-495d-bc47-e237455e9667")
+	)
+	(text "CLK0: VFO (16.0-16.2 MHz)\nCLK1: BFO (8.9985 MHz)\nCLK2: Spare"
+		(exclude_from_sim no)
+		(at 175.26 45.72 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left)
+		)
+		(uuid "95c5cff0-fbc2-4fc8-beb3-0127fba6930c")
+	)
+	(text "CONTROL SYSTEM\nArduino Nano + Si5351A DDS + OLED Display"
+		(exclude_from_sim no)
+		(at 101.6 30.48 0)
+		(effects
+			(font
+				(size 3 3)
+				(bold yes)
+			)
+		)
+		(uuid "a317e4f8-6e0b-4739-b574-361defed6a6f")
+	)
+	(text "Rotary Encoder\nA->D2, B->D3\nSW->D5"
+		(exclude_from_sim no)
+		(at 40.64 63.5 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left)
+		)
+		(uuid "c1b08334-bdf4-4153-b1c5-f1e4bc7efbf9")
+	)
+	(text "I2C Bus: SDA=A4, SCL=A5\nPullup: 4.7k to +5V"
+		(exclude_from_sim no)
+		(at 134.62 50.8 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left)
+		)
+		(uuid "e2247db5-239a-4e1e-bc1d-3471e429f366")
+	)
+	(hierarchical_label "TX_EN"
+		(shape output)
+		(at 137.16 83.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "00d4f056-144f-425e-a08a-cd291795aa74")
+	)
+	(hierarchical_label "BFO"
+		(shape output)
+		(at 177.8 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "58ed808d-f465-41f7-a56c-1df0e77caddb")
+	)
+	(hierarchical_label "VFO"
+		(shape output)
+		(at 177.8 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c9fce1f8-64c4-464f-a377-43633d5aeb2e")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 68.58 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "265eb56a-8e49-4d93-a6ac-7c02fd638255")
+		(property "Reference" "R2"
+			(at 70.866 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 70.866 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 68.58 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 68.58 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 68.58 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a3536157-7da0-4490-a55e-a82516e8f1a8")
+		)
+		(pin "2"
+			(uuid "34ea639c-99ed-44da-8a42-7609f71c7e32")
+		)
+		(instances
+			(project "7mhz_ssb_trx"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/a5a50c26-6f41-420d-a56d-1309aec1cb0c"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "OLED:OLED_I2C_128x64")
+		(at 160.02 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "67e05080-d203-442f-adbf-db8b00b0ab33")
+		(property "Reference" "U4"
+			(at 160.02 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "OLED_128x64"
+			(at 160.02 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+			(at 160.02 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b90ae5f9-a7a7-4b77-950f-31aad47fe3d9")
+		)
+		(pin "2"
+			(uuid "7e236d40-d2eb-48bd-86d7-14a598a3b2e7")
+		)
+		(pin "3"
+			(uuid "831ee86d-573f-4ff3-9657-008b21465ba0")
+		)
+		(pin "4"
+			(uuid "438ac930-df29-494d-9fa3-5cf1ff7cb07a")
+		)
+		(instances
+			(project "7mhz_ssb_trx"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/a5a50c26-6f41-420d-a56d-1309aec1cb0c"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 134.62 60.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "97b8c062-3b0f-4471-850b-184ce4060da4")
+		(property "Reference" "R3"
+			(at 136.906 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.7k"
+			(at 136.906 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 134.62 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 134.62 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 134.62 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f15fd55f-7f05-4152-825f-d2a7c34d4e9e")
+		)
+		(pin "2"
+			(uuid "82af8fd8-ba62-41cd-8483-28937e4c0d5a")
+		)
+		(instances
+			(project "7mhz_ssb_trx"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/a5a50c26-6f41-420d-a56d-1309aec1cb0c"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Arduino_Nano:Arduino_Nano")
+		(at 101.6 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a18c9a0e-6d71-43d8-817c-87518828d1b5")
+		(property "Reference" "U2"
+			(at 101.6 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Arduino_Nano"
+			(at 101.6 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Module:Arduino_Nano"
+			(at 101.6 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "30"
+			(uuid "58d7ef80-03cc-49c0-8eab-df1a2ec1d58c")
+		)
+		(pin "27"
+			(uuid "f9b5071f-10fa-4a7e-95a3-a568b8293686")
+		)
+		(pin "17"
+			(uuid "4da1d35e-4900-4e6c-a74e-2c3ee38c28b0")
+		)
+		(pin "29"
+			(uuid "7ced8414-8b7b-4bef-ba1c-4c7ae798fd4d")
+		)
+		(pin "5"
+			(uuid "28b71257-23c2-4bb2-a2a0-f03473f5bdd7")
+		)
+		(pin "6"
+			(uuid "79b8cd07-5675-4768-8b88-acd2b64bfe78")
+		)
+		(pin "7"
+			(uuid "2a52be1b-9207-40b5-aaa7-f6bdc96ecf77")
+		)
+		(pin "8"
+			(uuid "2c0c423b-8da2-4ecb-aa40-e77643895396")
+		)
+		(pin "9"
+			(uuid "fdd943bb-7224-4b3d-ae1b-20021f93eba8")
+		)
+		(pin "23"
+			(uuid "f7f70306-d6bc-4144-9d22-eeef9ae01e68")
+		)
+		(pin "24"
+			(uuid "ebeaa935-4773-49b4-b07f-40b0526dad5d")
+		)
+		(instances
+			(project "7mhz_ssb_trx"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/a5a50c26-6f41-420d-a56d-1309aec1cb0c"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 177.8 71.12 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a248ab48-4702-43a6-872f-7c77ecb39bf1")
+		(property "Reference" "C2"
+			(at 180.594 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 180.594 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm"
+			(at 177.8 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.8 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 177.8 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c6fe10d5-3f52-40c5-80e5-e316b1730a88")
+		)
+		(pin "2"
+			(uuid "178a976c-bb66-4395-8021-9cb24427f246")
+		)
+		(instances
+			(project "7mhz_ssb_trx"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/a5a50c26-6f41-420d-a56d-1309aec1cb0c"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Si5351:Si5351A_Module")
+		(at 160.02 60.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bd716800-a2e8-4dcb-8758-f028162dda13")
+		(property "Reference" "U3"
+			(at 160.02 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Si5351A"
+			(at 160.02 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical"
+			(at 160.02 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ce69ed15-93bf-435c-87e6-23f95c9bc461")
+		)
+		(pin "2"
+			(uuid "e18cf193-80c8-4e8c-89bd-aa5f7f719c77")
+		)
+		(pin "3"
+			(uuid "a38f541e-bd73-4633-a634-44f098f455ed")
+		)
+		(pin "4"
+			(uuid "42a7cf41-063e-4ccb-846b-e72003545f5a")
+		)
+		(pin "5"
+			(uuid "76fd5b40-3067-4949-8ea3-72bce160c5b7")
+		)
+		(pin "6"
+			(uuid "c9e144bb-d0af-465d-8014-f806bbed4ccf")
+		)
+		(pin "7"
+			(uuid "78c9e146-7e00-4d58-8115-1a0df579b77d")
+		)
+		(instances
+			(project "7mhz_ssb_trx"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/a5a50c26-6f41-420d-a56d-1309aec1cb0c"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Encoder:RotaryEncoder_SW")
+		(at 50.8 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c8d7e2ad-8cc3-4d8c-b92b-cc40c9c4e05f")
+		(property "Reference" "SW2"
+			(at 50.8 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "EC11"
+			(at 50.8 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
+			(at 50.8 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 50.8 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 50.8 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2a2735bc-0daa-48a6-b60a-129ff6d48ca7")
+		)
+		(pin "2"
+			(uuid "580855b5-6009-48ff-9e89-067867065dfa")
+		)
+		(pin "3"
+			(uuid "9356fe78-1fa8-4133-b408-7bc4576518ac")
+		)
+		(pin "4"
+			(uuid "bb76b4b0-f824-4d97-ba24-abe8f75669e7")
+		)
+		(pin "5"
+			(uuid "534c9575-119c-491a-8afe-f804f3beff5b")
+		)
+		(instances
+			(project "7mhz_ssb_trx"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/a5a50c26-6f41-420d-a56d-1309aec1cb0c"
+					(reference "SW2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 139.7 60.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dac8176a-baab-4b60-8d98-cc01d9934805")
+		(property "Reference" "R4"
+			(at 141.986 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.7k"
+			(at 141.986 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 139.7 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 139.7 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bd44b68b-c77e-4d8a-9809-6c0ae973edda")
+		)
+		(pin "2"
+			(uuid "f393d0ea-4ffa-4172-a9ef-9748dfcdbdd9")
+		)
+		(instances
+			(project "7mhz_ssb_trx"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/a5a50c26-6f41-420d-a56d-1309aec1cb0c"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
 )

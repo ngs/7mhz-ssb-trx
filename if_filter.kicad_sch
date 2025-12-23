@@ -1,670 +1,1068 @@
 (kicad_sch
-  (version 20231120)
-  (generator "eeschema")
-  (generator_version "8.0")
-  (uuid "if-filter-sheet-uuid-001")
-  (paper "A4")
-  (title_block
-    (title "IF Filter - 9MHz Ladder Filter")
-    (date "2024-12-24")
-    (rev "1.0")
-    (comment 1 "4-element crystal ladder filter, BW=2.4kHz")
-  )
-
-  (lib_symbols
-    (symbol "Crystal:Crystal"
-      (pin_names
-        (offset 1.016)
-      )
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (property "Reference" "Y"
-        (at 0 3.81 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Value" "Crystal"
-        (at 0 -3.81 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (symbol "Crystal_0_1"
-        (rectangle
-          (start -1.27 -1.905)
-          (end 1.27 1.905)
-          (stroke
-            (width 0.254)
-            (type solid)
-          )
-          (fill
-            (type none)
-          )
-        )
-        (polyline
-          (pts
-            (xy -2.54 -1.27) (xy -2.54 1.27)
-          )
-          (stroke
-            (width 0.508)
-            (type solid)
-          )
-          (fill
-            (type none)
-          )
-        )
-        (polyline
-          (pts
-            (xy 2.54 -1.27) (xy 2.54 1.27)
-          )
-          (stroke
-            (width 0.508)
-            (type solid)
-          )
-          (fill
-            (type none)
-          )
-        )
-      )
-      (symbol "Crystal_1_1"
-        (pin passive line
-          (at -5.08 0 0)
-          (length 2.54)
-          (name "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 5.08 0 180)
-          (length 2.54)
-          (name "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-    )
-    (symbol "Device:C"
-      (pin_names
-        (offset 0.254)
-      )
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (property "Reference" "C"
-        (at 0.635 2.54 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-          (justify left)
-        )
-      )
-      (property "Value" "C"
-        (at 0.635 -2.54 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-          (justify left)
-        )
-      )
-      (symbol "C_0_1"
-        (polyline
-          (pts
-            (xy -2.032 -0.762) (xy 2.032 -0.762)
-          )
-          (stroke
-            (width 0.508)
-            (type solid)
-          )
-          (fill
-            (type none)
-          )
-        )
-        (polyline
-          (pts
-            (xy -2.032 0.762) (xy 2.032 0.762)
-          )
-          (stroke
-            (width 0.508)
-            (type solid)
-          )
-          (fill
-            (type none)
-          )
-        )
-      )
-      (symbol "C_1_1"
-        (pin passive line
-          (at 0 3.81 270)
-          (length 2.794)
-          (name "~"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 0 -3.81 90)
-          (length 2.794)
-          (name "~"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-    )
-    (symbol "Device:R"
-      (pin_names
-        (offset 0)
-      )
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (property "Reference" "R"
-        (at 2.032 0 90)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Value" "R"
-        (at 0 0 90)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (symbol "R_0_1"
-        (rectangle
-          (start -1.016 -2.54)
-          (end 1.016 2.54)
-          (stroke
-            (width 0.254)
-            (type solid)
-          )
-          (fill
-            (type none)
-          )
-        )
-      )
-      (symbol "R_1_1"
-        (pin passive line
-          (at 0 3.81 270)
-          (length 1.27)
-          (name "~"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at 0 -3.81 90)
-          (length 1.27)
-          (name "~"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-    )
-  )
-
-  (hierarchical_label "IF_IN"
-    (shape input)
-    (at 38.1 76.2 180)
-    (effects
-      (font
-        (size 1.27 1.27)
-      )
-      (justify right)
-    )
-    (uuid "hlabel-if-in")
-  )
-  (hierarchical_label "IF_OUT"
-    (shape output)
-    (at 215.9 76.2 0)
-    (effects
-      (font
-        (size 1.27 1.27)
-      )
-      (justify left)
-    )
-    (uuid "hlabel-if-out")
-  )
-
-  (symbol
-    (lib_id "Device:R")
-    (at 50.8 76.2 90)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "R-in")
-    (property "Reference" "R6"
-      (at 50.8 73.66 90)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Value" "680"
-      (at 50.8 78.74 90)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "r6-pin1")
-    )
-    (pin "2"
-      (uuid "r6-pin2")
-    )
-  )
-
-  (symbol
-    (lib_id "Device:C")
-    (at 76.2 76.2 90)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "Cm1")
-    (property "Reference" "C10"
-      (at 76.2 71.12 90)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Value" "82pF"
-      (at 76.2 81.28 90)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "c10-pin1")
-    )
-    (pin "2"
-      (uuid "c10-pin2")
-    )
-  )
-
-  (symbol
-    (lib_id "Crystal:Crystal")
-    (at 88.9 91.44 90)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "Y1")
-    (property "Reference" "Y1"
-      (at 93.98 91.44 90)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Value" "9MHz"
-      (at 83.82 91.44 90)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "y1-pin1")
-    )
-    (pin "2"
-      (uuid "y1-pin2")
-    )
-  )
-
-  (symbol
-    (lib_id "Device:C")
-    (at 109.22 76.2 90)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "Cm2")
-    (property "Reference" "C11"
-      (at 109.22 71.12 90)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Value" "82pF"
-      (at 109.22 81.28 90)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "c11-pin1")
-    )
-    (pin "2"
-      (uuid "c11-pin2")
-    )
-  )
-
-  (symbol
-    (lib_id "Crystal:Crystal")
-    (at 121.92 91.44 90)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "Y2")
-    (property "Reference" "Y2"
-      (at 127 91.44 90)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Value" "9MHz"
-      (at 116.84 91.44 90)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "y2-pin1")
-    )
-    (pin "2"
-      (uuid "y2-pin2")
-    )
-  )
-
-  (symbol
-    (lib_id "Device:C")
-    (at 142.24 76.2 90)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "Cm3")
-    (property "Reference" "C12"
-      (at 142.24 71.12 90)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Value" "82pF"
-      (at 142.24 81.28 90)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "c12-pin1")
-    )
-    (pin "2"
-      (uuid "c12-pin2")
-    )
-  )
-
-  (symbol
-    (lib_id "Crystal:Crystal")
-    (at 154.94 91.44 90)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "Y3")
-    (property "Reference" "Y3"
-      (at 160.02 91.44 90)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Value" "9MHz"
-      (at 149.86 91.44 90)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "y3-pin1")
-    )
-    (pin "2"
-      (uuid "y3-pin2")
-    )
-  )
-
-  (symbol
-    (lib_id "Device:C")
-    (at 175.26 76.2 90)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "Cm4")
-    (property "Reference" "C13"
-      (at 175.26 71.12 90)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Value" "82pF"
-      (at 175.26 81.28 90)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "c13-pin1")
-    )
-    (pin "2"
-      (uuid "c13-pin2")
-    )
-  )
-
-  (symbol
-    (lib_id "Crystal:Crystal")
-    (at 187.96 91.44 90)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "Y4")
-    (property "Reference" "Y4"
-      (at 193.04 91.44 90)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Value" "9MHz"
-      (at 182.88 91.44 90)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "y4-pin1")
-    )
-    (pin "2"
-      (uuid "y4-pin2")
-    )
-  )
-
-  (symbol
-    (lib_id "Device:R")
-    (at 203.2 76.2 90)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "R-out")
-    (property "Reference" "R7"
-      (at 203.2 73.66 90)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Value" "680"
-      (at 203.2 78.74 90)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (pin "1"
-      (uuid "r7-pin1")
-    )
-    (pin "2"
-      (uuid "r7-pin2")
-    )
-  )
-
-  (text "9MHz LADDER FILTER\n4-element, BW = 2.4 kHz (SSB)"
-    (exclude_from_sim no)
-    (at 127 30.48 0)
-    (effects
-      (font
-        (size 3 3)
-        (bold yes)
-      )
-    )
-    (uuid "text-title-if")
-  )
-
-  (text "Crystal Selection:\n- Use same-lot 9MHz HC-49/S crystals\n- Select 4 crystals within 100Hz of each other\n- Cm values may need adjustment (68-100pF)\n- Rin/Rout: 470-1k ohm, adjust for best response"
-    (exclude_from_sim no)
-    (at 38.1 127 0)
-    (effects
-      (font
-        (size 1.5 1.5)
-      )
-      (justify left)
-    )
-    (uuid "text-notes")
-  )
-
-  (text "Expected Response:\n- Center: 9.000 MHz\n- -6dB BW: ~2.4 kHz\n- Insertion Loss: ~3-6 dB\n- Shape Factor: ~2.5:1"
-    (exclude_from_sim no)
-    (at 152.4 127 0)
-    (effects
-      (font
-        (size 1.5 1.5)
-      )
-      (justify left)
-    )
-    (uuid "text-response")
-  )
-
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "8bcadc55-c130-4486-9dd7-5af347cfb374")
+	(paper "A4")
+	(title_block
+		(title "IF Filter - 9MHz Ladder Filter")
+		(date "2024-12-24")
+		(rev "1.0")
+		(comment 1 "4-element crystal ladder filter, BW=2.4kHz")
+	)
+	(lib_symbols
+		(symbol "Crystal:Crystal"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Y"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Crystal"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Crystal:Crystal_HC49-4H_Vertical"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Crystal_0_1"
+				(polyline
+					(pts
+						(xy -2.54 -1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0.508)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -1.905)
+					(end 1.27 1.905)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -1.27) (xy 2.54 1.27)
+					)
+					(stroke
+						(width 0.508)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Crystal_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:C"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:R"
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "Crystal Selection:\n- Use same-lot 9MHz HC-49/S crystals\n- Select 4 crystals within 100Hz of each other\n- Cm values may need adjustment (68-100pF)\n- Rin/Rout: 470-1k ohm, adjust for best response"
+		(exclude_from_sim no)
+		(at 38.1 127 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left)
+		)
+		(uuid "2c9389ef-1819-4d58-898c-0da2629007a5")
+	)
+	(text "Expected Response:\n- Center: 9.000 MHz\n- -6dB BW: ~2.4 kHz\n- Insertion Loss: ~3-6 dB\n- Shape Factor: ~2.5:1"
+		(exclude_from_sim no)
+		(at 152.4 127 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left)
+		)
+		(uuid "b193f1b7-af22-4a17-abe7-8952acf5701a")
+	)
+	(text "9MHz LADDER FILTER\n4-element, BW = 2.4 kHz (SSB)"
+		(exclude_from_sim no)
+		(at 127 30.48 0)
+		(effects
+			(font
+				(size 3 3)
+				(bold yes)
+			)
+		)
+		(uuid "d5796a8a-d9d9-40e1-93b8-3ec1dd634445")
+	)
+	(hierarchical_label "IF_IN"
+		(shape input)
+		(at 38.1 76.2 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "aba8e823-cdd6-4e07-bc0a-e6f8d6ea1a77")
+	)
+	(hierarchical_label "IF_OUT"
+		(shape output)
+		(at 215.9 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d8a920f8-b5c0-4cd7-873e-6a8b26b5c023")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 142.24 76.2 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4a0d1595-7816-404d-823e-63392fd1ece9")
+		(property "Reference" "C13"
+			(at 142.24 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "82pF"
+			(at 142.24 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
+			(at 142.24 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cbd92cd1-24fc-463a-b762-4e60e443c91b")
+		)
+		(pin "2"
+			(uuid "1966962c-4240-4d78-bedf-41ece374e18c")
+		)
+		(instances
+			(project "7mhz_ssb_trx"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/d213132e-55d7-4a5d-9dbf-c4af9b1048a8"
+					(reference "C13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 76.2 76.2 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "539cff2d-6a8c-44a1-a7a6-69791f71da2e")
+		(property "Reference" "C11"
+			(at 76.2 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "82pF"
+			(at 76.2 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
+			(at 76.2 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 76.2 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 76.2 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d326f5ae-00d7-45e8-b7b7-cd41fa3ec9d5")
+		)
+		(pin "2"
+			(uuid "83e222ca-32bf-48f4-8765-0bd81507b6c1")
+		)
+		(instances
+			(project "7mhz_ssb_trx"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/d213132e-55d7-4a5d-9dbf-c4af9b1048a8"
+					(reference "C11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Crystal:Crystal")
+		(at 154.94 91.44 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5423e854-db6e-45f1-8009-57b78d833c63")
+		(property "Reference" "Y4"
+			(at 160.02 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "9MHz"
+			(at 149.86 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Crystal:Crystal_HC49-4H_Vertical"
+			(at 154.94 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.94 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 154.94 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6df5bd8a-5582-4eb0-9f83-4a6de38c2ca1")
+		)
+		(pin "2"
+			(uuid "d5a3ed2b-6db5-4e58-a948-de16c7c9dc1b")
+		)
+		(instances
+			(project "7mhz_ssb_trx"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/d213132e-55d7-4a5d-9dbf-c4af9b1048a8"
+					(reference "Y4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Crystal:Crystal")
+		(at 88.9 91.44 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6e211502-8dc2-4d31-8174-99ce08400eac")
+		(property "Reference" "Y2"
+			(at 93.98 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "9MHz"
+			(at 83.82 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Crystal:Crystal_HC49-4H_Vertical"
+			(at 88.9 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 88.9 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "67309d16-0149-4af7-bf89-82facf7244c1")
+		)
+		(pin "2"
+			(uuid "f523b5c4-f3b2-4a52-b3b9-81cd74a77490")
+		)
+		(instances
+			(project "7mhz_ssb_trx"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/d213132e-55d7-4a5d-9dbf-c4af9b1048a8"
+					(reference "Y2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 203.2 76.2 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9a7716ff-7caa-4d41-9804-2bf40d413305")
+		(property "Reference" "R12"
+			(at 203.2 73.66 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "680"
+			(at 203.2 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 203.2 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 203.2 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 203.2 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "685e12f9-ea43-4788-b4fe-7dd6c0f11928")
+		)
+		(pin "2"
+			(uuid "54a78289-1e5a-4d50-afe5-be213b5917ff")
+		)
+		(instances
+			(project "7mhz_ssb_trx"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/d213132e-55d7-4a5d-9dbf-c4af9b1048a8"
+					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 50.8 76.2 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9c24656f-8e32-4630-9edd-2e6fb95bcd36")
+		(property "Reference" "R11"
+			(at 50.8 73.66 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "680"
+			(at 50.8 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 50.8 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 50.8 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 50.8 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8ad17567-839a-4db0-8bfe-74c0199a14b6")
+		)
+		(pin "2"
+			(uuid "bc71c31c-f5bd-4947-b53d-12f2c8dc6295")
+		)
+		(instances
+			(project "7mhz_ssb_trx"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/d213132e-55d7-4a5d-9dbf-c4af9b1048a8"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Crystal:Crystal")
+		(at 187.96 91.44 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ab891076-c2cc-4b72-8aef-524e1619edb9")
+		(property "Reference" "Y5"
+			(at 193.04 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "9MHz"
+			(at 182.88 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Crystal:Crystal_HC49-4H_Vertical"
+			(at 187.96 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 187.96 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 187.96 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "abdfdf6e-261d-4382-87ab-54ed13820c88")
+		)
+		(pin "2"
+			(uuid "b0ae5eee-c4dc-4701-abaf-93ec0d098f03")
+		)
+		(instances
+			(project "7mhz_ssb_trx"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/d213132e-55d7-4a5d-9dbf-c4af9b1048a8"
+					(reference "Y5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 109.22 76.2 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b0a9a318-6d60-42df-98f1-7afe5307de23")
+		(property "Reference" "C12"
+			(at 109.22 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "82pF"
+			(at 109.22 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
+			(at 109.22 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 109.22 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7cab9c57-8fdb-46b3-9f39-6cf198c33a86")
+		)
+		(pin "2"
+			(uuid "3745c79f-1e62-4a13-bca3-12a6dd019db9")
+		)
+		(instances
+			(project "7mhz_ssb_trx"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/d213132e-55d7-4a5d-9dbf-c4af9b1048a8"
+					(reference "C12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 175.26 76.2 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e3929a59-2ed0-4b73-9692-6798eb1193c8")
+		(property "Reference" "C14"
+			(at 175.26 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "82pF"
+			(at 175.26 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm"
+			(at 175.26 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 175.26 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 175.26 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bc20997f-0484-45ad-a802-bba48f96640f")
+		)
+		(pin "2"
+			(uuid "f4501dfa-7bbe-4538-bafc-22e50209a3ec")
+		)
+		(instances
+			(project "7mhz_ssb_trx"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/d213132e-55d7-4a5d-9dbf-c4af9b1048a8"
+					(reference "C14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Crystal:Crystal")
+		(at 121.92 91.44 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e897206c-35de-470d-861a-e286084c559a")
+		(property "Reference" "Y3"
+			(at 127 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "9MHz"
+			(at 116.84 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Crystal:Crystal_HC49-4H_Vertical"
+			(at 121.92 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.92 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 121.92 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4981e223-a084-4f1a-a4cf-367b1ea43e81")
+		)
+		(pin "2"
+			(uuid "03f22960-3928-466c-8381-39a573fa0195")
+		)
+		(instances
+			(project "7mhz_ssb_trx"
+				(path "/a1b2c3d4-e5f6-7890-abcd-ef1234567890/d213132e-55d7-4a5d-9dbf-c4af9b1048a8"
+					(reference "Y3")
+					(unit 1)
+				)
+			)
+		)
+	)
 )
