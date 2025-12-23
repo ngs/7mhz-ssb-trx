@@ -1,0 +1,670 @@
+(kicad_sch
+  (version 20231120)
+  (generator "eeschema")
+  (generator_version "8.0")
+  (uuid "if-filter-sheet-uuid-001")
+  (paper "A4")
+  (title_block
+    (title "IF Filter - 9MHz Ladder Filter")
+    (date "2024-12-24")
+    (rev "1.0")
+    (comment 1 "4-element crystal ladder filter, BW=2.4kHz")
+  )
+
+  (lib_symbols
+    (symbol "Crystal:Crystal"
+      (pin_names
+        (offset 1.016)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Y"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Value" "Crystal"
+        (at 0 -3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "Crystal_0_1"
+        (rectangle
+          (start -1.27 -1.905)
+          (end 1.27 1.905)
+          (stroke
+            (width 0.254)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -2.54 -1.27) (xy -2.54 1.27)
+          )
+          (stroke
+            (width 0.508)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 2.54 -1.27) (xy 2.54 1.27)
+          )
+          (stroke
+            (width 0.508)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "Crystal_1_1"
+        (pin passive line
+          (at -5.08 0 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 5.08 0 180)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+    )
+    (symbol "Device:C"
+      (pin_names
+        (offset 0.254)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (symbol "C_0_1"
+        (polyline
+          (pts
+            (xy -2.032 -0.762) (xy 2.032 -0.762)
+          )
+          (stroke
+            (width 0.508)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -2.032 0.762) (xy 2.032 0.762)
+          )
+          (stroke
+            (width 0.508)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+    )
+    (symbol "Device:R"
+      (pin_names
+        (offset 0)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke
+            (width 0.254)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+
+  (hierarchical_label "IF_IN"
+    (shape input)
+    (at 38.1 76.2 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "hlabel-if-in")
+  )
+  (hierarchical_label "IF_OUT"
+    (shape output)
+    (at 215.9 76.2 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "hlabel-if-out")
+  )
+
+  (symbol
+    (lib_id "Device:R")
+    (at 50.8 76.2 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "R-in")
+    (property "Reference" "R6"
+      (at 50.8 73.66 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "680"
+      (at 50.8 78.74 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "r6-pin1")
+    )
+    (pin "2"
+      (uuid "r6-pin2")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:C")
+    (at 76.2 76.2 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "Cm1")
+    (property "Reference" "C10"
+      (at 76.2 71.12 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "82pF"
+      (at 76.2 81.28 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "c10-pin1")
+    )
+    (pin "2"
+      (uuid "c10-pin2")
+    )
+  )
+
+  (symbol
+    (lib_id "Crystal:Crystal")
+    (at 88.9 91.44 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "Y1")
+    (property "Reference" "Y1"
+      (at 93.98 91.44 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "9MHz"
+      (at 83.82 91.44 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "y1-pin1")
+    )
+    (pin "2"
+      (uuid "y1-pin2")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:C")
+    (at 109.22 76.2 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "Cm2")
+    (property "Reference" "C11"
+      (at 109.22 71.12 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "82pF"
+      (at 109.22 81.28 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "c11-pin1")
+    )
+    (pin "2"
+      (uuid "c11-pin2")
+    )
+  )
+
+  (symbol
+    (lib_id "Crystal:Crystal")
+    (at 121.92 91.44 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "Y2")
+    (property "Reference" "Y2"
+      (at 127 91.44 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "9MHz"
+      (at 116.84 91.44 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "y2-pin1")
+    )
+    (pin "2"
+      (uuid "y2-pin2")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:C")
+    (at 142.24 76.2 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "Cm3")
+    (property "Reference" "C12"
+      (at 142.24 71.12 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "82pF"
+      (at 142.24 81.28 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "c12-pin1")
+    )
+    (pin "2"
+      (uuid "c12-pin2")
+    )
+  )
+
+  (symbol
+    (lib_id "Crystal:Crystal")
+    (at 154.94 91.44 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "Y3")
+    (property "Reference" "Y3"
+      (at 160.02 91.44 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "9MHz"
+      (at 149.86 91.44 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "y3-pin1")
+    )
+    (pin "2"
+      (uuid "y3-pin2")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:C")
+    (at 175.26 76.2 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "Cm4")
+    (property "Reference" "C13"
+      (at 175.26 71.12 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "82pF"
+      (at 175.26 81.28 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "c13-pin1")
+    )
+    (pin "2"
+      (uuid "c13-pin2")
+    )
+  )
+
+  (symbol
+    (lib_id "Crystal:Crystal")
+    (at 187.96 91.44 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "Y4")
+    (property "Reference" "Y4"
+      (at 193.04 91.44 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "9MHz"
+      (at 182.88 91.44 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "y4-pin1")
+    )
+    (pin "2"
+      (uuid "y4-pin2")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:R")
+    (at 203.2 76.2 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "R-out")
+    (property "Reference" "R7"
+      (at 203.2 73.66 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "680"
+      (at 203.2 78.74 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "r7-pin1")
+    )
+    (pin "2"
+      (uuid "r7-pin2")
+    )
+  )
+
+  (text "9MHz LADDER FILTER\n4-element, BW = 2.4 kHz (SSB)"
+    (exclude_from_sim no)
+    (at 127 30.48 0)
+    (effects
+      (font
+        (size 3 3)
+        (bold yes)
+      )
+    )
+    (uuid "text-title-if")
+  )
+
+  (text "Crystal Selection:\n- Use same-lot 9MHz HC-49/S crystals\n- Select 4 crystals within 100Hz of each other\n- Cm values may need adjustment (68-100pF)\n- Rin/Rout: 470-1k ohm, adjust for best response"
+    (exclude_from_sim no)
+    (at 38.1 127 0)
+    (effects
+      (font
+        (size 1.5 1.5)
+      )
+      (justify left)
+    )
+    (uuid "text-notes")
+  )
+
+  (text "Expected Response:\n- Center: 9.000 MHz\n- -6dB BW: ~2.4 kHz\n- Insertion Loss: ~3-6 dB\n- Shape Factor: ~2.5:1"
+    (exclude_from_sim no)
+    (at 152.4 127 0)
+    (effects
+      (font
+        (size 1.5 1.5)
+      )
+      (justify left)
+    )
+    (uuid "text-response")
+  )
+
+)

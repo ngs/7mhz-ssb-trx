@@ -1,0 +1,546 @@
+(kicad_sch
+  (version 20231120)
+  (generator "eeschema")
+  (generator_version "8.0")
+  (uuid "a1b2c3d4-e5f6-7890-abcd-ef1234567890")
+  (paper "A3")
+  (title_block
+    (title "7MHz SSB Transceiver")
+    (date "2024-12-24")
+    (rev "1.0")
+    (company "Homebrew")
+    (comment 1 "5W Output, Si5351 DDS VFO")
+    (comment 2 "Single Conversion Superhet, 9MHz IF")
+    (comment 3 "For 4th Class Amateur Radio License")
+  )
+
+  (lib_symbols
+  )
+
+  (text "7MHz SSB TRANSCEIVER\nBlock Diagram / Top Level"
+    (exclude_from_sim no)
+    (at 148.59 30.48 0)
+    (effects
+      (font
+        (size 5 5)
+        (bold yes)
+      )
+      (justify left)
+    )
+    (uuid "title-text-1")
+  )
+
+  (text "SPECIFICATIONS:\n- Frequency: 7.000 - 7.200 MHz\n- Mode: LSB (SSB)\n- Output: 5W\n- IF: 9 MHz\n- VFO: Si5351A DDS\n- Power: DC 13.8V"
+    (exclude_from_sim no)
+    (at 20.32 30.48 0)
+    (effects
+      (font
+        (size 2.5 2.5)
+      )
+      (justify left)
+    )
+    (uuid "specs-text-1")
+  )
+
+  (sheet
+    (at 30.48 76.2)
+    (size 40.64 25.4)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 255 255 194 1)
+    )
+    (uuid "sheet-control")
+    (property "Sheetname" "Control"
+      (at 30.48 75.4884 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left bottom)
+      )
+    )
+    (property "Sheetfile" "control.kicad_sch"
+      (at 30.48 102.2346 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+    (pin "VFO" output
+      (at 71.12 83.82 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify right)
+      )
+      (uuid "pin-vfo")
+    )
+    (pin "BFO" output
+      (at 71.12 88.9 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify right)
+      )
+      (uuid "pin-bfo")
+    )
+    (pin "TX_EN" output
+      (at 71.12 93.98 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify right)
+      )
+      (uuid "pin-tx-en")
+    )
+  )
+
+  (sheet
+    (at 101.6 63.5)
+    (size 40.64 25.4)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 194 255 194 1)
+    )
+    (uuid "sheet-mixer")
+    (property "Sheetname" "Mixer_Modulator"
+      (at 101.6 62.7884 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left bottom)
+      )
+    )
+    (property "Sheetfile" "mixer_modulator.kicad_sch"
+      (at 101.6 89.5346 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+    (pin "VFO_IN" input
+      (at 101.6 71.12 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+      (uuid "pin-vfo-in")
+    )
+    (pin "BFO_IN" input
+      (at 101.6 76.2 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+      (uuid "pin-bfo-in")
+    )
+    (pin "RF_IN" input
+      (at 101.6 81.28 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+      (uuid "pin-rf-in")
+    )
+    (pin "IF_OUT" output
+      (at 142.24 71.12 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify right)
+      )
+      (uuid "pin-if-out")
+    )
+    (pin "TX_IF_IN" input
+      (at 142.24 76.2 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify right)
+      )
+      (uuid "pin-tx-if-in")
+    )
+    (pin "TX_RF_OUT" output
+      (at 142.24 81.28 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify right)
+      )
+      (uuid "pin-tx-rf-out")
+    )
+    (pin "AF_OUT" output
+      (at 142.24 86.36 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify right)
+      )
+      (uuid "pin-af-out")
+    )
+  )
+
+  (sheet
+    (at 165.1 63.5)
+    (size 35.56 20.32)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 194 194 255 1)
+    )
+    (uuid "sheet-if-filter")
+    (property "Sheetname" "IF_Filter"
+      (at 165.1 62.7884 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left bottom)
+      )
+    )
+    (property "Sheetfile" "if_filter.kicad_sch"
+      (at 165.1 84.4546 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+    (pin "IF_IN" input
+      (at 165.1 71.12 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+      (uuid "pin-if-filter-in")
+    )
+    (pin "IF_OUT" output
+      (at 200.66 71.12 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify right)
+      )
+      (uuid "pin-if-filter-out")
+    )
+  )
+
+  (sheet
+    (at 101.6 109.22)
+    (size 40.64 25.4)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 255 194 194 1)
+    )
+    (uuid "sheet-pa")
+    (property "Sheetname" "Power_Amplifier"
+      (at 101.6 108.5084 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left bottom)
+      )
+    )
+    (property "Sheetfile" "power_amplifier.kicad_sch"
+      (at 101.6 135.2546 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+    (pin "RF_IN" input
+      (at 101.6 116.84 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+      (uuid "pin-pa-rf-in")
+    )
+    (pin "RF_OUT" output
+      (at 142.24 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify right)
+      )
+      (uuid "pin-pa-rf-out")
+    )
+    (pin "+12V" input
+      (at 101.6 127 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+      (uuid "pin-pa-12v")
+    )
+  )
+
+  (sheet
+    (at 165.1 109.22)
+    (size 35.56 20.32)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 255 224 194 1)
+    )
+    (uuid "sheet-filter")
+    (property "Sheetname" "BPF_LPF"
+      (at 165.1 108.5084 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left bottom)
+      )
+    )
+    (property "Sheetfile" "bpf_lpf.kicad_sch"
+      (at 165.1 130.1746 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+    (pin "ANT" bidirectional
+      (at 200.66 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify right)
+      )
+      (uuid "pin-ant")
+    )
+    (pin "RX_OUT" output
+      (at 165.1 116.84 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+      (uuid "pin-rx-out")
+    )
+    (pin "TX_IN" input
+      (at 165.1 121.92 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+      (uuid "pin-tx-in")
+    )
+  )
+
+  (sheet
+    (at 30.48 109.22)
+    (size 40.64 25.4)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 224 224 224 1)
+    )
+    (uuid "sheet-power")
+    (property "Sheetname" "Power_TR"
+      (at 30.48 108.5084 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left bottom)
+      )
+    )
+    (property "Sheetfile" "power_tr.kicad_sch"
+      (at 30.48 135.2546 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+    (pin "DC_IN" input
+      (at 30.48 116.84 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+      (uuid "pin-dc-in")
+    )
+    (pin "+12V" output
+      (at 71.12 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify right)
+      )
+      (uuid "pin-12v")
+    )
+    (pin "+9V" output
+      (at 71.12 121.92 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify right)
+      )
+      (uuid "pin-9v")
+    )
+    (pin "+5V" output
+      (at 71.12 127 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify right)
+      )
+      (uuid "pin-5v")
+    )
+    (pin "TX_EN" input
+      (at 30.48 127 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+      (uuid "pin-tx-en-in")
+    )
+  )
+
+  (sheet
+    (at 220.98 63.5)
+    (size 35.56 25.4)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid)
+      (color 0 0 0 0)
+    )
+    (fill
+      (color 255 194 255 1)
+    )
+    (uuid "sheet-audio")
+    (property "Sheetname" "Audio"
+      (at 220.98 62.7884 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left bottom)
+      )
+    )
+    (property "Sheetfile" "audio.kicad_sch"
+      (at 220.98 89.5346 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left top)
+      )
+    )
+    (pin "AF_IN" input
+      (at 220.98 71.12 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+      (uuid "pin-af-in")
+    )
+    (pin "MIC_OUT" output
+      (at 220.98 81.28 180)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+      (uuid "pin-mic-out")
+    )
+    (pin "SP" output
+      (at 256.54 71.12 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify right)
+      )
+      (uuid "pin-sp")
+    )
+    (pin "MIC" input
+      (at 256.54 81.28 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify right)
+      )
+      (uuid "pin-mic")
+    )
+  )
+
+)

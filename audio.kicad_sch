@@ -1,0 +1,1738 @@
+(kicad_sch
+  (version 20231120)
+  (generator "eeschema")
+  (generator_version "8.0")
+  (uuid "audio-sheet-uuid-001")
+  (paper "A4")
+  (title_block
+    (title "Audio Section")
+    (date "2024-12-24")
+    (rev "1.0")
+    (comment 1 "Mic Amp (2SC1815) + AF Power Amp (LM386)")
+  )
+
+  (lib_symbols
+    (symbol "Amplifier:LM386"
+      (pin_names
+        (offset 1.016)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Value" "LM386"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (hide yes)
+        )
+      )
+      (symbol "LM386_0_1"
+        (polyline
+          (pts
+            (xy -5.08 5.08) (xy -5.08 -5.08) (xy 5.08 0) (xy -5.08 5.08)
+          )
+          (stroke
+            (width 0.254)
+            (type solid)
+          )
+          (fill
+            (type background)
+          )
+        )
+      )
+      (symbol "LM386_1_1"
+        (pin input line
+          (at -7.62 2.54 0)
+          (length 2.54)
+          (name "GAIN"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin input line
+          (at -7.62 -2.54 0)
+          (length 2.54)
+          (name "-IN"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin input line
+          (at -7.62 0 0)
+          (length 2.54)
+          (name "+IN"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin power_in line
+          (at 0 -7.62 90)
+          (length 2.54)
+          (name "GND"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "4"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin output line
+          (at 7.62 0 180)
+          (length 2.54)
+          (name "OUT"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "5"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin power_in line
+          (at 0 7.62 270)
+          (length 2.54)
+          (name "VCC"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "6"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 2.54 -5.08 90)
+          (length 2.54)
+          (name "BYPASS"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "7"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin input line
+          (at 7.62 2.54 180)
+          (length 2.54)
+          (name "GAIN"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "8"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+    )
+    (symbol "Transistor:2SC1815"
+      (pin_names
+        (offset 0)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Q"
+        (at 5.08 1.905 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Value" "2SC1815"
+        (at 5.08 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (symbol "2SC1815_0_1"
+        (polyline
+          (pts
+            (xy 0.635 0.635) (xy 2.54 2.54)
+          )
+          (stroke
+            (width 0)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 0.635 -0.635) (xy 2.54 -2.54)
+          )
+          (stroke
+            (width 0)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 0.635 1.905) (xy 0.635 -1.905)
+          )
+          (stroke
+            (width 0.508)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778)
+          )
+          (stroke
+            (width 0)
+            (type solid)
+          )
+          (fill
+            (type outline)
+          )
+        )
+        (circle
+          (center 1.27 0)
+          (radius 2.8194)
+          (stroke
+            (width 0.254)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "2SC1815_1_1"
+        (pin passive line
+          (at 2.54 -5.08 90)
+          (length 2.54)
+          (name "E"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 2.54 5.08 270)
+          (length 2.54)
+          (name "C"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin input line
+          (at -2.54 0 0)
+          (length 2.54)
+          (name "B"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+    )
+    (symbol "Device:R"
+      (pin_names
+        (offset 0)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke
+            (width 0.254)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+    )
+    (symbol "Device:R_POT"
+      (pin_names
+        (offset 1.016)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "VR"
+        (at -4.445 0 90)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Value" "R_POT"
+        (at -2.54 0 90)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "R_POT_0_1"
+        (polyline
+          (pts
+            (xy 2.54 0) (xy 1.524 0)
+          )
+          (stroke
+            (width 0)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 1.143 0) (xy 2.286 0.508) (xy 2.286 -0.508) (xy 1.143 0)
+          )
+          (stroke
+            (width 0)
+            (type solid)
+          )
+          (fill
+            (type outline)
+          )
+        )
+        (rectangle
+          (start 1.016 2.54)
+          (end -1.016 -2.54)
+          (stroke
+            (width 0.254)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "R_POT_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 3.81 0 180)
+          (length 1.27)
+          (name "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "3"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+    )
+    (symbol "Device:C"
+      (pin_names
+        (offset 0.254)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (symbol "C_0_1"
+        (polyline
+          (pts
+            (xy -2.032 -0.762) (xy 2.032 -0.762)
+          )
+          (stroke
+            (width 0.508)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -2.032 0.762) (xy 2.032 0.762)
+          )
+          (stroke
+            (width 0.508)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+    )
+    (symbol "Device:CP"
+      (pin_names
+        (offset 0.254)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Value" "CP"
+        (at 0.635 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (symbol "CP_0_1"
+        (rectangle
+          (start -2.286 0.508)
+          (end 2.286 1.016)
+          (stroke
+            (width 0)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -1.778 2.286) (xy -0.762 2.286)
+          )
+          (stroke
+            (width 0)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -1.27 2.794) (xy -1.27 1.778)
+          )
+          (stroke
+            (width 0)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (rectangle
+          (start -2.286 -1.016)
+          (end 2.286 -0.508)
+          (stroke
+            (width 0)
+            (type solid)
+          )
+          (fill
+            (type outline)
+          )
+        )
+      )
+      (symbol "CP_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+    )
+    (symbol "Connector:AudioJack3"
+      (pin_names
+        (offset 1.016)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Value" "AudioJack3"
+        (at 0 -6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "AudioJack3_0_1"
+        (rectangle
+          (start -3.81 5.08)
+          (end 3.81 -5.08)
+          (stroke
+            (width 0.254)
+            (type solid)
+          )
+          (fill
+            (type background)
+          )
+        )
+      )
+      (symbol "AudioJack3_1_1"
+        (pin passive line
+          (at 6.35 2.54 180)
+          (length 2.54)
+          (name "TIP"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 6.35 0 180)
+          (length 2.54)
+          (name "RING"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 6.35 -2.54 180)
+          (length 2.54)
+          (name "SLEEVE"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+    )
+    (symbol "Device:Speaker"
+      (pin_names
+        (offset 1.016)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "SP"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Value" "Speaker"
+        (at 0 -5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "Speaker_0_1"
+        (rectangle
+          (start -1.27 1.27)
+          (end 0 -1.27)
+          (stroke
+            (width 0.254)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 0 1.27) (xy 2.54 3.81) (xy 2.54 -3.81) (xy 0 -1.27)
+          )
+          (stroke
+            (width 0.254)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "Speaker_1_1"
+        (pin passive line
+          (at -3.81 1.27 0)
+          (length 2.54)
+          (name "+"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at -3.81 -1.27 0)
+          (length 2.54)
+          (name "-"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+    )
+    (symbol "Device:Microphone"
+      (pin_names
+        (offset 1.016)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "MK"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Value" "ECM"
+        (at 0 -3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "Microphone_0_1"
+        (circle
+          (center 0 0)
+          (radius 1.905)
+          (stroke
+            (width 0.254)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -1.27 -1.397) (xy -1.27 -2.54) (xy 1.27 -2.54) (xy 1.27 -1.397)
+          )
+          (stroke
+            (width 0.254)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "Microphone_1_1"
+        (pin passive line
+          (at -2.54 -5.08 90)
+          (length 2.54)
+          (name "OUT"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 2.54 -5.08 90)
+          (length 2.54)
+          (name "GND"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+
+  (hierarchical_label "AF_IN"
+    (shape input)
+    (at 30.48 76.2 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "hlabel-af-in")
+  )
+  (hierarchical_label "MIC_OUT"
+    (shape output)
+    (at 139.7 165.1 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "hlabel-mic-out")
+  )
+  (hierarchical_label "SP"
+    (shape output)
+    (at 198.12 76.2 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "hlabel-sp")
+  )
+  (hierarchical_label "MIC"
+    (shape input)
+    (at 30.48 154.94 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "hlabel-mic")
+  )
+
+  (symbol
+    (lib_id "Amplifier:LM386")
+    (at 116.84 76.2 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "U10-lm386")
+    (property "Reference" "U10"
+      (at 116.84 66.04 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "LM386N-1"
+      (at 116.84 86.36 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "u10-1")
+    )
+    (pin "2"
+      (uuid "u10-2")
+    )
+    (pin "3"
+      (uuid "u10-3")
+    )
+    (pin "4"
+      (uuid "u10-4")
+    )
+    (pin "5"
+      (uuid "u10-5")
+    )
+    (pin "6"
+      (uuid "u10-6")
+    )
+    (pin "7"
+      (uuid "u10-7")
+    )
+    (pin "8"
+      (uuid "u10-8")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:R_POT")
+    (at 63.5 76.2 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "VR1-vol")
+    (property "Reference" "VR1"
+      (at 58.42 76.2 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10k"
+      (at 63.5 83.82 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "vr1-1")
+    )
+    (pin "2"
+      (uuid "vr1-2")
+    )
+    (pin "3"
+      (uuid "vr1-3")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:CP")
+    (at 50.8 76.2 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "C31-af-in")
+    (property "Reference" "C31"
+      (at 50.8 71.12 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10uF"
+      (at 50.8 81.28 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "c31-1")
+    )
+    (pin "2"
+      (uuid "c31-2")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:CP")
+    (at 88.9 76.2 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "C32-lm-in")
+    (property "Reference" "C32"
+      (at 88.9 71.12 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10uF"
+      (at 88.9 81.28 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "c32-1")
+    )
+    (pin "2"
+      (uuid "c32-2")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:CP")
+    (at 137.16 76.2 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "C33-lm-out")
+    (property "Reference" "C33"
+      (at 137.16 71.12 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "470uF"
+      (at 137.16 81.28 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "c33-1")
+    )
+    (pin "2"
+      (uuid "c33-2")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:R")
+    (at 160.02 76.2 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "R12-zobel")
+    (property "Reference" "R12"
+      (at 160.02 73.66 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10"
+      (at 160.02 78.74 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "r12-1")
+    )
+    (pin "2"
+      (uuid "r12-2")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:C")
+    (at 170.18 86.36 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "C34-zobel")
+    (property "Reference" "C34"
+      (at 175.26 85.09 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "47nF"
+      (at 175.26 87.63 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "c34-1")
+    )
+    (pin "2"
+      (uuid "c34-2")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:Speaker")
+    (at 185.42 81.28 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "SP1")
+    (property "Reference" "SP1"
+      (at 185.42 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "8ohm"
+      (at 185.42 88.9 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "sp1-1")
+    )
+    (pin "2"
+      (uuid "sp1-2")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:CP")
+    (at 129.54 63.5 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "C35-bypass")
+    (property "Reference" "C35"
+      (at 134.62 62.23 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "100uF"
+      (at 134.62 64.77 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "c35-1")
+    )
+    (pin "2"
+      (uuid "c35-2")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:CP")
+    (at 109.22 93.98 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "C36-gain")
+    (property "Reference" "C36"
+      (at 114.3 92.71 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "10uF"
+      (at 114.3 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "c36-1")
+    )
+    (pin "2"
+      (uuid "c36-2")
+    )
+  )
+
+  (symbol
+    (lib_id "Transistor:2SC1815")
+    (at 78.74 160.02 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "Q4-mic-amp")
+    (property "Reference" "Q4"
+      (at 85.09 158.75 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "2SC1815"
+      (at 85.09 161.29 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "q4-e")
+    )
+    (pin "2"
+      (uuid "q4-c")
+    )
+    (pin "3"
+      (uuid "q4-b")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:Microphone")
+    (at 45.72 154.94 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "MK1-ecm")
+    (property "Reference" "MK1"
+      (at 45.72 149.86 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "ECM"
+      (at 45.72 160.02 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "mk1-1")
+    )
+    (pin "2"
+      (uuid "mk1-2")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:R")
+    (at 43.18 144.78 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "R13-ecm-bias")
+    (property "Reference" "R13"
+      (at 45.466 143.51 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "2.2k"
+      (at 45.466 146.05 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "r13-1")
+    )
+    (pin "2"
+      (uuid "r13-2")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:R")
+    (at 81.28 144.78 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "R14-mic-rc")
+    (property "Reference" "R14"
+      (at 83.566 143.51 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "10k"
+      (at 83.566 146.05 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "r14-1")
+    )
+    (pin "2"
+      (uuid "r14-2")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:R")
+    (at 81.28 177.8 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "R15-mic-re")
+    (property "Reference" "R15"
+      (at 83.566 176.53 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "2.2k"
+      (at 83.566 179.07 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "r15-1")
+    )
+    (pin "2"
+      (uuid "r15-2")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:R")
+    (at 68.58 147.32 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "R16-mic-rb")
+    (property "Reference" "R16"
+      (at 70.866 146.05 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (property "Value" "4.7k"
+      (at 70.866 148.59 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (justify left)
+      )
+    )
+    (pin "1"
+      (uuid "r16-1")
+    )
+    (pin "2"
+      (uuid "r16-2")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:C")
+    (at 60.96 160.02 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "C37-mic-in")
+    (property "Reference" "C37"
+      (at 60.96 154.94 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "1uF"
+      (at 60.96 165.1 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "c37-1")
+    )
+    (pin "2"
+      (uuid "c37-2")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:CP")
+    (at 109.22 165.1 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "C38-mic-out")
+    (property "Reference" "C38"
+      (at 109.22 160.02 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10uF"
+      (at 109.22 170.18 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "c38-1")
+    )
+    (pin "2"
+      (uuid "c38-2")
+    )
+  )
+
+  (text "AUDIO SECTION\nMic Amp (2SC1815) + AF Power Amp (LM386)"
+    (exclude_from_sim no)
+    (at 127 20.32 0)
+    (effects
+      (font
+        (size 3 3)
+        (bold yes)
+      )
+    )
+    (uuid "text-title-audio")
+  )
+
+  (text "AF POWER AMPLIFIER\nLM386N-1\nGain: ~200 (with C36)\nOutput: ~0.5W @ 8ohm"
+    (exclude_from_sim no)
+    (at 116.84 104.14 0)
+    (effects
+      (font
+        (size 1.5 1.5)
+      )
+    )
+    (uuid "text-lm386")
+  )
+
+  (text "MIC AMPLIFIER\n2SC1815 common emitter\nGain: ~10-20x"
+    (exclude_from_sim no)
+    (at 78.74 193.04 0)
+    (effects
+      (font
+        (size 1.5 1.5)
+      )
+    )
+    (uuid "text-mic")
+  )
+
+  (text "VR1: Volume Control\n10kA (Log taper)"
+    (exclude_from_sim no)
+    (at 63.5 91.44 0)
+    (effects
+      (font
+        (size 1.5 1.5)
+      )
+    )
+    (uuid "text-vr")
+  )
+
+)

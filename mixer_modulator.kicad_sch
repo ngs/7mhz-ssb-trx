@@ -1,0 +1,856 @@
+(kicad_sch
+  (version 20231120)
+  (generator "eeschema")
+  (generator_version "8.0")
+  (uuid "mixer-sheet-uuid-001")
+  (paper "A4")
+  (title_block
+    (title "Mixer / Modulator / Detector")
+    (date "2024-12-24")
+    (rev "1.0")
+    (comment 1 "SA612 x3: RX Mixer, Balanced Modulator, Product Detector")
+  )
+
+  (lib_symbols
+    (symbol "SA612:SA612"
+      (pin_names
+        (offset 1.016)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 10.16 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Value" "SA612"
+        (at 0 -10.16 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (hide yes)
+        )
+      )
+      (symbol "SA612_0_1"
+        (rectangle
+          (start -7.62 8.89)
+          (end 7.62 -8.89)
+          (stroke
+            (width 0.254)
+            (type solid)
+          )
+          (fill
+            (type background)
+          )
+        )
+      )
+      (symbol "SA612_1_1"
+        (pin input line
+          (at -10.16 6.35 0)
+          (length 2.54)
+          (name "IN_A"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin input line
+          (at -10.16 3.81 0)
+          (length 2.54)
+          (name "IN_B"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin power_in line
+          (at -10.16 -6.35 0)
+          (length 2.54)
+          (name "GND"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin output line
+          (at 10.16 6.35 180)
+          (length 2.54)
+          (name "OUT_A"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "4"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin output line
+          (at 10.16 3.81 180)
+          (length 2.54)
+          (name "OUT_B"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "5"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin input line
+          (at 10.16 -3.81 180)
+          (length 2.54)
+          (name "OSC_E"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "6"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin output line
+          (at 10.16 -6.35 180)
+          (length 2.54)
+          (name "OSC_B"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "7"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin power_in line
+          (at -10.16 -3.81 0)
+          (length 2.54)
+          (name "VCC"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "8"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+    )
+    (symbol "Device:R"
+      (pin_names
+        (offset 0)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke
+            (width 0.254)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+    )
+    (symbol "Device:C"
+      (pin_names
+        (offset 0.254)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (symbol "C_0_1"
+        (polyline
+          (pts
+            (xy -2.032 -0.762) (xy 2.032 -0.762)
+          )
+          (stroke
+            (width 0.508)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -2.032 0.762) (xy 2.032 0.762)
+          )
+          (stroke
+            (width 0.508)
+            (type solid)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+    )
+  )
+
+  (hierarchical_label "VFO_IN"
+    (shape input)
+    (at 25.4 50.8 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "hlabel-vfo-in")
+  )
+  (hierarchical_label "BFO_IN"
+    (shape input)
+    (at 25.4 129.54 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "hlabel-bfo-in")
+  )
+  (hierarchical_label "RF_IN"
+    (shape input)
+    (at 25.4 38.1 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "hlabel-rf-in")
+  )
+  (hierarchical_label "IF_OUT"
+    (shape output)
+    (at 101.6 38.1 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "hlabel-if-out")
+  )
+  (hierarchical_label "TX_IF_IN"
+    (shape input)
+    (at 157.48 104.14 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "hlabel-tx-if-in")
+  )
+  (hierarchical_label "TX_RF_OUT"
+    (shape output)
+    (at 228.6 104.14 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "hlabel-tx-rf-out")
+  )
+  (hierarchical_label "AF_OUT"
+    (shape output)
+    (at 228.6 165.1 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "hlabel-af-out")
+  )
+
+  (symbol
+    (lib_id "SA612:SA612")
+    (at 63.5 45.72 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "U4-rx-mixer")
+    (property "Reference" "U4"
+      (at 63.5 33.02 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "SA612"
+      (at 63.5 58.42 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "u4-pin1")
+    )
+    (pin "2"
+      (uuid "u4-pin2")
+    )
+    (pin "3"
+      (uuid "u4-pin3")
+    )
+    (pin "4"
+      (uuid "u4-pin4")
+    )
+    (pin "5"
+      (uuid "u4-pin5")
+    )
+    (pin "6"
+      (uuid "u4-pin6")
+    )
+    (pin "7"
+      (uuid "u4-pin7")
+    )
+    (pin "8"
+      (uuid "u4-pin8")
+    )
+  )
+
+  (symbol
+    (lib_id "SA612:SA612")
+    (at 63.5 121.92 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "U5-bal-mod")
+    (property "Reference" "U5"
+      (at 63.5 109.22 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "SA612"
+      (at 63.5 134.62 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "u5-pin1")
+    )
+    (pin "2"
+      (uuid "u5-pin2")
+    )
+    (pin "3"
+      (uuid "u5-pin3")
+    )
+    (pin "4"
+      (uuid "u5-pin4")
+    )
+    (pin "5"
+      (uuid "u5-pin5")
+    )
+    (pin "6"
+      (uuid "u5-pin6")
+    )
+    (pin "7"
+      (uuid "u5-pin7")
+    )
+    (pin "8"
+      (uuid "u5-pin8")
+    )
+  )
+
+  (symbol
+    (lib_id "SA612:SA612")
+    (at 190.5 111.76 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "U6-tx-mixer")
+    (property "Reference" "U6"
+      (at 190.5 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "SA612"
+      (at 190.5 124.46 0)
+      (effects
+        (font
+            (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "u6-pin1")
+    )
+    (pin "2"
+      (uuid "u6-pin2")
+    )
+    (pin "3"
+      (uuid "u6-pin3")
+    )
+    (pin "4"
+      (uuid "u6-pin4")
+    )
+    (pin "5"
+      (uuid "u6-pin5")
+    )
+    (pin "6"
+      (uuid "u6-pin6")
+    )
+    (pin "7"
+      (uuid "u6-pin7")
+    )
+    (pin "8"
+      (uuid "u6-pin8")
+    )
+  )
+
+  (symbol
+    (lib_id "SA612:SA612")
+    (at 190.5 172.72 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "U7-prod-det")
+    (property "Reference" "U7"
+      (at 190.5 160.02 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "SA612"
+      (at 190.5 185.42 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "u7-pin1")
+    )
+    (pin "2"
+      (uuid "u7-pin2")
+    )
+    (pin "3"
+      (uuid "u7-pin3")
+    )
+    (pin "4"
+      (uuid "u7-pin4")
+    )
+    (pin "5"
+      (uuid "u7-pin5")
+    )
+    (pin "6"
+      (uuid "u7-pin6")
+    )
+    (pin "7"
+      (uuid "u7-pin7")
+    )
+    (pin "8"
+      (uuid "u7-pin8")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:C")
+    (at 35.56 38.1 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "C2-rf-coupling")
+    (property "Reference" "C2"
+      (at 35.56 33.02 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10nF"
+      (at 35.56 43.18 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "c2-pin1")
+    )
+    (pin "2"
+      (uuid "c2-pin2")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:C")
+    (at 35.56 50.8 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "C3-vfo-coupling")
+    (property "Reference" "C3"
+      (at 35.56 45.72 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "100pF"
+      (at 35.56 55.88 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "c3-pin1")
+    )
+    (pin "2"
+      (uuid "c3-pin2")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:R")
+    (at 88.9 38.1 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "R4-out-load")
+    (property "Reference" "R4"
+      (at 88.9 35.56 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "1.5k"
+      (at 88.9 40.64 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "r4-pin1")
+    )
+    (pin "2"
+      (uuid "r4-pin2")
+    )
+  )
+
+  (symbol
+    (lib_id "Device:R")
+    (at 88.9 43.18 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "R5-out-load2")
+    (property "Reference" "R5"
+      (at 88.9 48.26 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "1.5k"
+      (at 88.9 53.34 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (pin "1"
+      (uuid "r5-pin1")
+    )
+    (pin "2"
+      (uuid "r5-pin2")
+    )
+  )
+
+  (text "MIXER / MODULATOR / DETECTOR\nSA612 x 4"
+    (exclude_from_sim no)
+    (at 127 20.32 0)
+    (effects
+      (font
+        (size 3 3)
+        (bold yes)
+      )
+    )
+    (uuid "text-title-mixer")
+  )
+
+  (text "U4: RX MIXER\n7MHz RF + 16MHz VFO -> 9MHz IF\n(Receive path)"
+    (exclude_from_sim no)
+    (at 63.5 66.04 0)
+    (effects
+      (font
+        (size 1.5 1.5)
+      )
+    )
+    (uuid "text-u4")
+  )
+
+  (text "U5: BALANCED MODULATOR\nAudio + 8.9985MHz BFO -> 9MHz DSB\n(Transmit path)"
+    (exclude_from_sim no)
+    (at 63.5 142.24 0)
+    (effects
+      (font
+        (size 1.5 1.5)
+      )
+    )
+    (uuid "text-u5")
+  )
+
+  (text "U6: TX MIXER\n9MHz IF + 16MHz VFO -> 7MHz RF\n(Transmit path)"
+    (exclude_from_sim no)
+    (at 190.5 132.08 0)
+    (effects
+      (font
+        (size 1.5 1.5)
+      )
+    )
+    (uuid "text-u6")
+  )
+
+  (text "U7: PRODUCT DETECTOR\n9MHz IF + 8.9985MHz BFO -> Audio\n(Receive path)"
+    (exclude_from_sim no)
+    (at 190.5 193.04 0)
+    (effects
+      (font
+        (size 1.5 1.5)
+      )
+    )
+    (uuid "text-u7")
+  )
+
+  (text "VCC = +8V (from 7808 regulator)\nBypass caps: 0.1uF on each VCC pin"
+    (exclude_from_sim no)
+    (at 25.4 20.32 0)
+    (effects
+      (font
+        (size 1.5 1.5)
+      )
+      (justify left)
+    )
+    (uuid "text-vcc")
+  )
+
+)
